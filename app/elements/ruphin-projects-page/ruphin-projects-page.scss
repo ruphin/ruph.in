@@ -1,0 +1,42 @@
+@font-face {
+    font-family: projects-page-noodle;
+    src: url(/fonts/BigNoodleTooOblique.ttf);
+}
+
+a {
+  text-decoration: none;
+}
+
+:host {
+  display: block;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.header {
+  display: block;
+  height: 15.625vw;
+  margin-bottom: -1vw;
+  width: 50vw;
+  #text {
+    font-family: projects-page-noodle;
+    font-size: 10.625vw;
+  }
+}
+
+.modes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  > * {
+    margin-right: 1.9225vw;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.twitch {
+  background-image: url("twitch.jpg");
+}

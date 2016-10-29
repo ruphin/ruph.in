@@ -1,0 +1,45 @@
+:host {
+  display: block;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.header {
+  display: block;
+  height: 15.625vw;
+  margin-bottom: -1vw;
+  width: 50vw;
+  #text {
+    font-family: work-page-noodle;
+    font-size: 10.625vw;
+  }
+}
+
+.modes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  > * {
+    margin-right: 1.9225vw;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.unionstation {
+  background-image: url("unionstation.jpg");
+}
+
+.phusionweb {
+  background-image: url("passenger.jpg");
+}
+
+.bash {
+  background-image: url("bash.jpg")
+}

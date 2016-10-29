@@ -1,0 +1,45 @@
+<link rel="import" href="../../vendor/polymer/polymer.html">
+<link rel="import" href="../overwebs-main-menu/overwebs-main-menu.html">
+<link rel="import" href="../overwebs-player-widget/overwebs-player-widget.html">
+<link rel="import" href="../ruphin-person-data/ruphin-person-data.html">
+<link rel="import" href="../ruphin-skills-data/ruphin-skills-data.html">
+<link rel="import" href="../ruphin-location-data/ruphin-location-data.html">
+<link rel="import" href="ruphin-main-page-style.html">
+
+<style media="screen">
+  @font-face {
+    font-family: main-page-noodle;
+    src: url("/fonts/BigNoodleTooOblique.ttf");
+  }
+
+  @font-face {
+    font-family: main-page-futura;
+    src: url("/fonts/Futura.ttf");
+  }
+</style>
+
+<dom-module id="ruphin-main-page">
+  <template>
+    <style include="ruphin-main-page-style"></style>
+    <ruphin-person-data person="{{personData}}"></ruphin-person-data>
+    <ruphin-location-data locations="{{locationData}}"></ruphin-location-data>
+    <overwebs-player-widget player="[[personData]]"></overwebs-player-widget>
+    <overwebs-main-menu>
+      <a href="/projects" content="Projects" class="main">Projects</a>
+      <a href="/work" content="Work" class="main">Work</a>
+      <a href="/skills" content="Skills" class="main">Skills</a>
+      <a href="https://github.com/ruphin" content="Github" class="sub">Github</a>
+      <a href="https://www.twitch.tv/ruphin" content="Dev Stream" class="sub">Dev Stream</a>
+      <a href="https://twitter.com/ruphin_" content="Twitter" class="sub">Twitter</a>
+      <a href="mailto:ruphin@ruphin.net" content="Email" class="sub">Email</a>
+    </overwebs-main-menu>
+    <div class="hero">
+      <div class="nameShadow">{{location}}</div>
+      <div class="nameShadow2">{{location}}</div>
+      <div class="name">{{location}}</div>
+      <div class="unlocks">{{date}}</div>
+      <div class="unlocksShadow">{{date}}</div>
+    </div>
+  </template>
+  <script type="text/javascript" src="ruphin-main-page.js"></script>
+</dom-module>

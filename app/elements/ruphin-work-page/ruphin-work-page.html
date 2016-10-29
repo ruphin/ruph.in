@@ -1,0 +1,53 @@
+<link rel="import" href="../../vendor/polymer/polymer.html">
+<link rel="import" href="../ruphin-person-data/ruphin-person-data.html">
+<link rel="import" href="../overwebs-player-widget/overwebs-player-widget.html">
+<link rel="import" href="../overwebs-play-tile/overwebs-play-tile.html">
+<link rel="import" href="ruphin-work-page-style.html">
+
+<style media="screen">
+  @font-face {
+    font-family: work-page-noodle;
+    src: url(/fonts/BigNoodleTooOblique.ttf);
+  }
+</style>
+
+
+<dom-module id="ruphin-work-page">
+  <template>
+    <style include="ruphin-work-page-style"></style>
+    <svg class="header" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="fillgradient" x1="0" x2="0" y1="0" y2="1">
+          <stop stop-color="#ffffff" offset="0" stop-opacity=".9"/>
+          <stop stop-color="#ffffff" offset="1" stop-opacity="0.1"/>
+        </linearGradient>
+        <linearGradient id="outlinegradient" x1="0" x2="0" y1="0" y2="1">
+          <stop stop-color="#4C5C76" offset="0" stop-opacity="0.6"/>
+          <stop stop-color="#4C5C76" offset="1" stop-opacity="0.3"/>
+        </linearGradient>
+      </defs>
+      <g>
+        <text id="text" x="4.225vw" y="14.85vw" stroke-width="0.12625vw" stroke-linejoin="round" stroke-alignment="outside" stroke="url(#outlinegradient)" fill="url(#fillgradient)">WORK</text>
+      </g>
+    </svg>
+    <ruphin-person-data person="{{personData}}"></ruphin-person-data>
+    <overwebs-player-widget player="[[personData]]"></overwebs-player-widget>
+    <div class="modes">
+      <a href="https://www.unionstationapp.com"><overwebs-play-tile class="unionstation">
+        <span class="title">Union Station</span>
+        <span class="hover-text">Performance Analytics platform for Ruby and Nodejs apps.</span>
+      </overwebs-play-tile></a>
+      <a href="https://www.phusion.nl"><overwebs-play-tile class="phusionweb">
+        <span class="title">Phusion Web</span>
+        <span class="hover-text">A collection of corporate web real estate.</span>
+      </overwebs-play-tile></a>
+     <overwebs-play-tile class="bash">
+        <span class="title">Bash scripts</span>
+        <span class="hover-text">A lot of them.</span>
+      </overwebs-play-tile>
+    </div>
+
+    <overwebs-global-button id="backButton" action="back"></overwebs-global-button>
+  </template>
+  <script type="text/javascript" src="ruphin-work-page.js"></script>
+</dom-module>

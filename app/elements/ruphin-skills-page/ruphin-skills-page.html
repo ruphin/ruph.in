@@ -1,0 +1,37 @@
+<link rel="import" href="../../vendor/polymer/polymer.html">
+<link rel="import" href="../overwebs-gallery-hero/overwebs-gallery-hero.html">
+<link rel="import" href="../ruphin-person-data/ruphin-person-data.html">
+<link rel="import" href="../ruphin-skills-data/ruphin-skills-data.html">
+<link rel="import" href="../overwebs-player-widget/overwebs-player-widget.html">
+<link rel="import" href="ruphin-skills-page-style.html">
+
+<dom-module id="ruphin-skills-page">
+  <template>
+    <style include="ruphin-skills-page-style"></style>
+    <svg class="header" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="fillgradient" x1="0" x2="0" y1="0" y2="1">
+          <stop stop-color="#ffffff" offset="0" stop-opacity=".9"/>
+          <stop stop-color="#ffffff" offset="1" stop-opacity="0.2"/>
+        </linearGradient>
+        <linearGradient id="outlinegradient" x1="0" x2="0" y1="0" y2="1">
+          <stop stop-color="#4C5C76" offset="0" stop-opacity="0.6"/>
+          <stop stop-color="#4C5C76" offset="1" stop-opacity="0.3"/>
+        </linearGradient>
+      </defs>
+      <g>
+        <text id="text" x="4.225vw" y="12.25vw" stroke-width="0.12625vw" stroke-linejoin="round" stroke-alignment="outside" stroke="url(#outlinegradient)" fill="url(#fillgradient)">SKILLS</text>
+      </g>
+    </svg>
+    <ruphin-skills-data skills="{{skillData}}"></ruphin-skills-data>
+    <ruphin-person-data person="{{personData}}"></ruphin-person-data>
+    <overwebs-player-widget player="[[personData]]"></overwebs-player-widget>
+    <div class="hero-gallery">
+      <template is="dom-repeat" items="[[skills]]">
+        <overwebs-gallery-hero hero="[[item]]" player-unlocks="[[unlocks]]"></overwebs-gallery-hero>
+      </template>
+    </div>
+    <overwebs-global-button id="backButton" action="back"></overwebs-global-button>
+  </template>
+  <script type="text/javascript" src="ruphin-skills-page.js"></script>
+</dom-module>
