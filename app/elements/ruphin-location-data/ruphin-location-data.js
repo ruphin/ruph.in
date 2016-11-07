@@ -1,7 +1,7 @@
 let locations = {
   newyork: {
     name: 'New York',
-    date: '4 may 1998' //test
+    date: '14-17 Jun 2013'
   }
 }
 
